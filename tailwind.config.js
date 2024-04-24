@@ -6,13 +6,21 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+    colors: {
+      primary: "#1E1E1E",
+      secondary: "#6E6E6E",
+      background: "#EFEFEF",
     },
+    fontSize: {
+      hero: ["112px", { fontWeight: "900", lineHeight: "1.2" }],
+      title: ["32px", { fontWeight: "normal", letterSpacing: "0.12em" }],
+      heading: ["32px", { fontWeight: "medium", letterSpacing: "0.04em" }],
+      focus: ["72px", { fontWeight: "bold", letterSpacing: "0.08em" }],
+      subtitle: ["24px", { fontWeight: "normal", letterSpacing: "0.04em" }],
+      link: ["18px", { fontWeight: "light", letterSpacing: "0.12em"}],
+      para: ["16px", { fontWeight: "300", letterSpacing: "0.04em" }],
+    },
+    extend: {},
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
 };
