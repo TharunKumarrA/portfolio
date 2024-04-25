@@ -18,7 +18,7 @@ module.exports = {
       focus: ["72px", { fontWeight: "bold", letterSpacing: "0.08em" }],
       subtitle: ["24px", { fontWeight: "normal", letterSpacing: "0.04em" }],
       link: ["18px", { fontWeight: "light", letterSpacing: "0.12em"}],
-      para: ["16px", { fontWeight: "300", letterSpacing: "0.04em" }],
+      para: ["18px", { fontWeight: "300", letterSpacing: "0.04em" }],
     },
     extend: {},
   },
