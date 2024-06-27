@@ -21,7 +21,12 @@ module.exports = {
       link: ["18px", { fontWeight: "light", letterSpacing: "0.12em" }],
       para: ["18px", { fontWeight: "300", letterSpacing: "0.04em" }],
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        komigo: ["var(--font-komigo)", "sans-serif"],
+        code7x5: ["var(--font-code7x5)", "monospace"],
+      },
+    },
   },
   plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
 };

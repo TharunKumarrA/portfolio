@@ -6,7 +6,7 @@ export default function Card({
 }) {
   return (
     <main className="bg-primary flex flex-row gap-16 px-16 py-8 text-background h-[400px]">
-      <div className="flex flex-col mr-16">
+      <div className="flex flex-col mr-16 ml-4">
         <div className="text-focus">{titleline1}</div>
         <div className="text-focus">{titleline2}</div>
         <div className="text-para mt-4">{description}</div>

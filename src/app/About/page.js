@@ -1,12 +1,23 @@
 "use client";
 
 import Image from "next/image";
-import PrimaryBtn from "next/image";
+4;
+import localFont from "next/font/local";
+import PrimaryBtn from "../components/primaryBtn";
 import PageHeader from "../components/pageHeader";
 import CarouselDefault from "./components/Carousal";
 
+const Komigo = localFont({
+  src: "../../../public/fonts/Komigo3DRegular-rg1lK.ttf",
+  variable: "--font-komigo",
+});
+const Code7x5 = localFont({
+  src: "../../../public/fonts/Code7X5Regular-ypBe.ttf",
+  variable: "--font-code7x5",
+});
+
 export default function About() {
-  return(
+  return (
     <>
       <PageHeader title="ABOUT ME" />
       <main className="my-16">
@@ -37,15 +48,40 @@ export default function About() {
                 landscape of technology to make a tangible impact in the
                 industry.
               </div>
-              <PrimaryBtn text="ABOUT ME" />
             </div>
           </div>
         </div>
       </main>
-      <main className="min-h-screen">
-        <div className="text-title flex justify-center items-center">SKILLS</div>
+      <main className="">
+        <div className="text-title flex justify-center items-center">
+          SKILLS
+        </div>
         <div className="flex justify-center items-center">
           <CarouselDefault />
+        </div>
+      </main>
+      <main className="flex flex-row gap-64 px-32 my-16">
+        <div className="flex flex-col text-focus font-normal">
+          <div className="flex">
+            I do{" "}
+            <span className={`${Code7x5.className} mx-4 font-semibold`}>
+              {" "}
+              COOL
+            </span>
+          </div>
+          <div className="flex">things</div>
+          <div className="flex">
+            beyond{" "}
+            <span className={`${Code7x5.className} mx-4 font-semibold`}>
+              WORK!
+            </span>
+          </div>
+          <div className="my-8">
+            <PrimaryBtn text="PLAY" />
+          </div>
+        </div>
+        <div className="-mt-16">
+          <Image src="/collage1.webp" alt="Play" height={640} width={400} />
         </div>
       </main>
     </>
