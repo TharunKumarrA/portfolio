@@ -42,6 +42,30 @@ const skillSet = [
     imgURL: "/web_dev.svg",
     Icons: [
       {
+        icon: <SiNextdotjs className="skill-icon" />,
+        iconDesc: "Next JS",
+      },
+      {
+        icon: <FaReact className="skill-icon" />,
+        iconDesc: "React JS",
+      },
+      {
+        icon: <FaVuejs className="skill-icon" />,
+        iconDesc: "Vue JS",
+      },
+      {
+        icon: <SiFlask className="skill-icon" />,
+        iconDesc: "Flask",
+      },
+      {
+        icon: <SiTailwindcss className="skill-icon" />,
+        iconDesc: "Tailwind CSS",
+      },
+      {
+        icon: <FaBootstrap className="skill-icon" />,
+        iconDesc: "Bootstrap",
+      },
+      {
         icon: <FaHtml5 className="skill-icon" />,
         iconDesc: "HTML 5",
       },
@@ -51,35 +75,19 @@ const skillSet = [
       },
       {
         icon: <IoLogoJavascript className="skill-icon" />,
-        iconDesc: "HTML 5",
+        iconDesc: "JS",
       },
       {
-        icon: <FaVuejs className="skill-icon" />,
-        iconDesc: "HTML 5",
-      },
-      {
-        icon: <FaReact className="skill-icon" />,
-        iconDesc: "HTML 5",
-      },
-      {
-        icon: <SiNextdotjs className="skill-icon" />,
-        iconDesc: "HTML 5",
+        icon: <IoLogoNodejs className="skill-icon" />,
+        iconDesc: "Node JS",
       },
       {
         icon: <SiExpress className="skill-icon" />,
         iconDesc: "Express JS",
       },
       {
-        icon: <IoLogoNodejs className="skill-icon" />,
-        iconDesc: "HTML 5",
-      },
-      {
-        icon: <SiFlask className="skill-icon" />,
-        iconDesc: "HTML 5",
-      },
-      {
         icon: <SiMysql className="skill-icon" />,
-        iconDesc: "HTML 5",
+        iconDesc: "MySQL",
       },
       {
         icon: <BiLogoPostgresql className="skill-icon" />,
@@ -88,14 +96,6 @@ const skillSet = [
       {
         icon: <SiSqlite className="skill-icon" />,
         iconDesc: "Sqlite3",
-      },
-      {
-        icon: <SiTailwindcss className="skill-icon" />,
-        iconDesc: "HTML 5",
-      },
-      {
-        icon: <FaBootstrap className="skill-icon" />,
-        iconDesc: "HTML 5",
       },
     ],
   },
@@ -107,27 +107,27 @@ const skillSet = [
     Icons: [
       {
         icon: <FaGitAlt className="skill-icon" />,
-        iconDesc: "HTML 5",
+        iconDesc: "Git",
       },
       {
         icon: <FaGithub className="skill-icon" />,
-        iconDesc: "CSS 3",
+        iconDesc: "Github",
       },
       {
         icon: <FaFigma className="skill-icon" />,
-        iconDesc: "HTML 5",
+        iconDesc: "Figma",
       },
       {
         icon: <SiPostman className="skill-icon" />,
-        iconDesc: "HTML 5",
+        iconDesc: "Postman",
       },
       {
         icon: <SiVisualstudiocode className="skill-icon" />,
-        iconDesc: "HTML 5",
+        iconDesc: "VS Code",
       },
       {
         icon: <SiVisualstudio className="skill-icon" />,
-        iconDesc: "HTML 5",
+        iconDesc: "Visual Studio",
       },
       {
         icon: <SiEclipseide className="skill-icon" />,
@@ -176,10 +176,6 @@ const skillSet = [
       {
         icon: <FaDatabase className="skill-icon" />,
         iconDesc: "Structured Query Language",
-      },
-      {
-        icon: <BsRegex className="skill-icon" />,
-        iconDesc: "regular expression",
       },
     ],
   },
