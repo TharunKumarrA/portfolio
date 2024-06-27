@@ -4,6 +4,7 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./**/@material-tailwind/**/*.{html,js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     colors: {
@@ -17,7 +18,7 @@ module.exports = {
       heading: ["32px", { fontWeight: "medium", letterSpacing: "0.04em" }],
       focus: ["72px", { fontWeight: "bold", letterSpacing: "0.08em" }],
       subtitle: ["24px", { fontWeight: "normal", letterSpacing: "0.04em" }],
-      link: ["18px", { fontWeight: "light", letterSpacing: "0.12em"}],
+      link: ["18px", { fontWeight: "light", letterSpacing: "0.12em" }],
       para: ["18px", { fontWeight: "300", letterSpacing: "0.04em" }],
     },
     extend: {},

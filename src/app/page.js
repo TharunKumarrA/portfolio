@@ -11,6 +11,7 @@ import { RiLinkedinBoxFill } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import Footer from "./components/footer";
+import NavBar from "./components/navbar";
 
 export default function Home() {
   const [copied, setCopied] = useState(false);
@@ -28,23 +29,26 @@ export default function Home() {
 
   const featured_projects = [
     {
-      projectTitle: "ANOKHA '24",
-      projectDescription:
-        "Collaborated with a 16 member team in developing a full-stack web app for students to register and participate for events with payment integrations in my college's Techfest Anokha 2024. Utilized NextJS, Tailwind CSS and GSAP to create a visually appealing and user-friendly frontend interface.",
-      projectImage: "/anokha-24.png",
+      title: "ANOKHA '24",
+      techStack: "NextJS | NodeJS | Tailwind CSS | GSAP | API",
+      description:
+        "Collaborated with a 16 member team in developing a full-stack web app for students to register and participate for events with payment integrations in my college's Techfest Anokha 2024.Created a visually appealing and user-friendly frontend interface.",
+      image: "/anokha-24.png",
     },
     {
-      projectTitle: "AI STUDY MATE",
-      projectDescription:
+      title: "AI STUDY MATE",
+      techStack: "Vue | NodeJS | Google Bard API",
+      description:
         "AI StudyMate is an innovative learning app designed to enhance your learning experience through intelligent AI assistance. Learn smart, learn simple with our user-friendly platform that adapts to your pace.",
-      projectImage: "/AI-Study-Mate.webp",
+      image: "/AI-Study-Mate.webp",
     },
   ];
 
   return (
     <>
-      <main className="h-screen">
-        <div className="flex flex-col h-full justify-center items-center gap-12">
+      <NavBar/>
+      <main className="h-screen ">
+        <div className="flex flex-col h-full justify-center items-center gap-10">
           <div className="flex flex-col justify-center items-center">
             <div className="text-hero">HEY THERE, I&apos;M</div>
             <div className="text-hero">THARUN.</div>
@@ -74,9 +78,10 @@ export default function Home() {
             {featured_projects.map((project, index) => (
               <Project
                 key={index}
-                projectTitle={project.projectTitle}
-                projectDescription={project.projectDescription}
-                projectImage={project.projectImage}
+                projectTitle={project.title}
+                projectTechStack={project.techStack}
+                projectDescription={project.description}
+                projectImage={project.image}
               />
             ))}
             <SecondaryBtn text="VIEW ALL PROJECTS" />
@@ -91,7 +96,7 @@ export default function Home() {
           <div className="flex flex-row mx-32 gap-16 my-8 ">
             <div className="rounded-2xl hover:scale-95 transition duration-300 ease-in-out w-80">
               <Image
-                src="/profile.webp"
+                src="/DSC_0197.JPG"
                 alt="Profile Picture"
                 width={300}
                 height={600}
