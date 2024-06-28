@@ -26,6 +26,15 @@ module.exports = {
         komigo: ["var(--font-komigo)", "sans-serif"],
         code7x5: ["var(--font-code7x5)", "monospace"],
       },
+      keyframes: {
+        spin360: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+      },
+      animation: {
+        spin360: "spin360 0.5s ease-in-out",
+      },
     },
   },
   plugins: [require("tailwind-scrollbar")({ nocompatible: true })],

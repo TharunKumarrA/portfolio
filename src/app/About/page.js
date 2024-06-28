@@ -6,6 +6,9 @@ import localFont from "next/font/local";
 import PrimaryBtn from "../components/primaryBtn";
 import PageHeader from "../components/pageHeader";
 import CarouselDefault from "./components/Carousal";
+import { IoReloadCircle } from "react-icons/io5";
+import { useState, useEffect } from "react";
+import Footer from "../components/footer";
 
 const Komigo = localFont({
   src: "../../../public/fonts/Komigo3DRegular-rg1lK.ttf",
@@ -16,7 +19,37 @@ const Code7x5 = localFont({
   variable: "--font-code7x5",
 });
 
+const randomQuotes = [
+  "Life is a journey, not a destination",
+  "Stay Hungry, Stay Foolish",
+  "The only way to do great work is to love what you do",
+  "The best way to predict the future is to create it",
+  "The only limit to our realization of tomorrow will be our doubts of today",
+  "The only thing that is constant is change",
+  "The best way to find yourself is to lose yourself in the service of others",
+  "The only thing we have to fear is fear itself",
+  "The only thing necessary for the triumph of evil",
+];
+
 export default function About() {
+  const [animate, setAnimate] = useState(false);
+  const [randomQuote, setRandomQuote] = useState("");
+
+  useEffect(() => {
+    if (animate) {
+      setAnimate(true);
+      const timer = setTimeout(() => setAnimate(false), 500);
+      return () => clearTimeout(timer);
+    }
+  }, [animate]);
+
+  const handleClick = () => {
+    setAnimate(true);
+    const randomIndex = Math.floor(Math.random() * randomQuotes.length);
+    setRandomQuote(randomQuotes[randomIndex]);
+    console.log(randomQuote);
+  };
+
   return (
     <>
       <PageHeader title="ABOUT ME" />
@@ -84,6 +117,26 @@ export default function About() {
           <Image src="/collage1.webp" alt="Play" height={640} width={400} />
         </div>
       </main>
+      <main className="bg-primary flex flex-row p-8 mx-8 gap-16 rounded-xl text-background items-center">
+        <div className="flex flex-col">
+          <div className="flex flex-row text-focus items-center gap-4">
+            <div className="text-focus">QUOTES </div>
+            <div
+              className={`${animate ? "animate-spin360" : ""}`}
+              onClick={handleClick}
+            >
+              <IoReloadCircle />
+            </div>
+          </div>
+          <div>I love quotes, so thought I would share some with you :)</div>
+        </div>
+        <div className="text-para text-justify my-4">
+          {randomQuote
+            ? `❛ ${randomQuote} ❜`
+            : "❛ Click the reload icon ❜"}
+        </div>
+      </main>
+      <Footer />
     </>
   );
 }
